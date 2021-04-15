@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  db:
+    image: mysql:8
+    environment:
+      - MYSQL_DATABASE=onboarding
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    command: "--character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci"
+    ports:
+      - "127.0.0.1:3306:3306"
